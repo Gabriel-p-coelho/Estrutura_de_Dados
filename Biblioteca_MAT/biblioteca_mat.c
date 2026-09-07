@@ -4,12 +4,13 @@
 
 #define MAX_VETORES 10
 
+/*Estrutura de dados - Arrays*/
 typedef struct {
     float *dados;
     int tamanho;
     int capacidade;
 } Vetor;
-/*Operações com o array*/
+
 void inicializar_array(Vetor *v, int capacidade) {
     v->dados = malloc(capacidade * sizeof(float));
     v->tamanho = 0;
@@ -66,7 +67,6 @@ void liberar_array(Vetor *v) {
 }
 
 /*Operações matematicas*/
-
 void multiplicar_escalar(Vetor *v, float escalar, Vetor *resultado) {
     inicializar_array(resultado, v->tamanho);
     for (int i = 0; i < v->tamanho; i++) {
@@ -120,6 +120,7 @@ float similaridade_cosseno(Vetor *v1, Vetor *v2) {
     }
     return produto / (norma1 * norma2);
 }
+
 int vetor_mais_similar(Vetor *consulta, Vetor conjunto[], int quantidade, int indice_ignorar) {
     int melhor_indice = -1;
     float melhor_similaridade = -2.0f;
@@ -136,7 +137,6 @@ int vetor_mais_similar(Vetor *consulta, Vetor conjunto[], int quantidade, int in
 }
 
 /*Funções de apoio*/
-
 Vetor vetores[MAX_VETORES];
 int total_vetores = 0;
 
@@ -192,7 +192,6 @@ void criar_vetor(void) {
 }
 
 /*MENU*/
-
 void exibir_menu(void) {
     printf("\n===== MENU =====\n");
     printf("1  - Criar novo vetor\n");

@@ -2,8 +2,7 @@
 
 Programa em C (`biblioteca_mat.c`) que armazena vetores de números
 reais em arrays alocados dinamicamente e implementa operações
-matemáticas sobre eles, incluindo similaridade de cosseno — sem uso
-de bibliotecas externas para as operações da estrutura de dados.
+matemáticas sobre eles,sem uso de bibliotecas externas para as operações da estrutura de dados.
 
 ## Requisitos
 
@@ -51,7 +50,7 @@ As operações `inicializar_array`, `inserir`, `imprimir`, `buscar` e
 exigidas pelo enunciado e estão implementadas e testadas (veja a
 seção de testes abaixo). `buscar` e `remover` não aparecem no menu
 porque a lista de **funcionalidades do sistema** do enunciado não as
-inclui — a estrutura oferece essas operações, mas o sistema não
+inclui, a estrutura oferece essas operações, mas o sistema não
 precisa expô-las ao usuário final.
 
 ---

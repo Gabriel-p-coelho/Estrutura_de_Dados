@@ -13,13 +13,13 @@ armazenar os discos). Cada uma das três torres é uma pilha própria.
 ## Compilação
 
 ```bash
-gcc -Wall -Wextra -std=c11 -o hanoi hanoi.c
+gcc -Wall -Wextra -std=c11 -o torre_hanoi torre_hanoi.c
 ```
 
 ## Execução
 
 ```bash
-./hanoi
+./torre_hanoi
 ```
 
 O programa não tem um menu numerado como em outros exercícios — ele

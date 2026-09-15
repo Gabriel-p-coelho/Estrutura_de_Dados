@@ -74,14 +74,13 @@ void imprimir(Lista *lista) {
     int pos = 1;
     printf("\n----- Playlist (%d musica(s)) -----\n", lista->quantidade);
     while (atual != NULL) {
-        printf("%d) [ID %d] %s - %s (%s) - %d:%02d\n",
+        printf("%d) [ID %d] %s - %s (%s) - %d min\n",
                pos,
                atual->musica.id,
                atual->musica.titulo,
                atual->musica.artista,
                atual->musica.album,
-               atual->musica.duracao / 60,
-               atual->musica.duracao % 60);
+               atual->musica.duracao);
         atual = atual->proximo;
         pos++;
     }
@@ -189,7 +188,6 @@ void ler_string(char *destino, int tamanho) {
 Musica cadastrar_musica(Lista *lista) {
     Musica m;
     int id;
-    int min, seg;
 
     do {
         printf("ID da musica: ");
@@ -213,12 +211,9 @@ Musica cadastrar_musica(Lista *lista) {
     printf("Album: ");
     ler_string(m.album, TAM_ALBUM);
 
-    printf("Duracao - minutos: ");
-    scanf("%d", &min);
-    printf("Duracao - segundos: ");
-    scanf("%d", &seg);
+    printf("Duracao (em minutos): ");
+    scanf("%d", &m.duracao);
     limpar_buffer();
-    m.duracao = min * 60 + seg;
 
     return m;
 }
@@ -315,8 +310,7 @@ int main(void) {
                 break;
             case 9: {
                 int total = duracao_total(&playlist);
-                printf("Duracao total: %d:%02d  (%d segundos)\n",
-                       total / 60, total % 60, total);
+                printf("Duracao total: %d minuto(s)\n", total);
                 break;
             }
             case 0:

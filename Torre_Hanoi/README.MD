@@ -35,9 +35,7 @@ Torre de destino (1-3):
 
 `inicializar_pilha`, `empilhar`, `desempilhar`, `topo` e `imprimir`
 são as **operações da estrutura de dados** exigidas pelo enunciado.
-Diferente do exercício da biblioteca de vetores, aqui todas as cinco
-operações são efetivamente usadas pelo sistema: `topo` é chamada duas
-vezes a cada jogada (para espiar o disco de origem e o de destino
+`topo` é chamada duas vezes a cada jogada (para espiar o disco de origem e o de destino
 sem removê-los) antes de qualquer `desempilhar`/`empilhar` ser
 executado — é essa checagem que impede os movimentos inválidos.
 

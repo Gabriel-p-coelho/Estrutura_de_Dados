@@ -148,7 +148,7 @@ static void cadastrar_pedido(Heap *h) {
 
     printf("Descricao: ");
     fgets(p.descricao, TAM_DESCRICAO, stdin);
-    p.descricao[strcspn(p.descricao, "\n")] = '\0'; /* remove o \n do fgets */
+    p.descricao[strcspn(p.descricao, "\n")] = '\0'; 
 
     printf("Prioridade: ");
     scanf("%d", &p.prioridade);
